@@ -1,0 +1,40 @@
+# The flagship end-to-end demo: compile -> breakpoint -> run -> halt -> select
+# work-item -> inspect variables (source-level, via DWARF) -> inspect memory -> step ->
+# continue. See README.md ("Demo script") for the annotated walkthrough and the
+# explanation of the bug this surfaces.
+#
+# Run with:  scripts/dev.sh bash -c "cd build && POCL_DEVICES=basic ./oclgdb --batch -x ../scripts/demo.txt ../kernels/blur3.ocl-run"
+
+compile
+info kernel
+list 1,36
+
+# The buggy edge-clamp guard only fires for the very last work-item in each work-group
+# (lid == local_size-1); filter the breakpoint to the one that matters: global id 255,
+# the very last work-item of the whole launch.
+break 26 if wi == (255,0,0)
+run
+
+# Source-level names, resolved through DWARF -- not raw registers.
+info locals
+print gid
+print n
+
+# The bug, stated in one line: gid (255) is compared against n (256), so the guard that
+# is supposed to detect "this is the last element" never fires, and the un-clamped
+# `gid + 1` branch reads one element past the end of `in`.
+print gid == n
+
+# "relevant memory": the local tile this work-item is about to write into, and the
+# global input buffer it's reading out of bounds from.
+info buffers
+x/4f in
+
+# Step one source line forward and confirm execution keeps going correctly for this
+# work-item (DWARF's line table takes us straight to the next line with code, across
+# the closing brace and the barrier).
+step
+
+# Let the launch finish. ocl-runner's own output-verification prints the mismatch this
+# bug produces -- the debugger just showed you why, from source, before it happened.
+continue
