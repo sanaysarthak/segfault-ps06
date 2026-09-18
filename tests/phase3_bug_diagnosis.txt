@@ -1,0 +1,25 @@
+# Phase 3 exit criterion: the flagship end-to-end demo -- compile, breakpoint at the
+# buggy line, run, halt, inspect the specific work-item's variables, see the bug's cause
+# directly from source-level state.
+# Note: the breakpoint is on line 26 (`int right_src = ...`), not line 25 (the `if`
+# itself) -- pocl's compiler attributes line 25's own DWARF row to the *left*-edge
+# branch's epilogue jump (a scheduling artifact; see docs/PHASE0-FINDINGS.md), so line
+# 26 is the row that genuinely belongs to the lid==lsz-1 (right-edge) branch body.
+# right_src has not been assigned yet at this exact point, but gid and n -- the two
+# values the buggy guard actually compares -- are already in scope, and they are enough
+# to see the bug directly from source-level state: gid (255) != n (256), so the guard
+# takes the un-clamped `gid + 1` branch and reads one element past the buffer.
+load kernels/blur3.ocl-run
+compile
+break 26 if wi == (255,0,0)
+run
+# expect: Breakpoint 1
+# expect: work-item (255,0,0)
+print gid
+# expect: gid = 255
+print n
+# expect: n = 256
+print gid == n
+# expect: gid == n = 0
+continue
+# expect: MISMATCH out[255]
