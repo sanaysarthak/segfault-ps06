@@ -1,0 +1,28 @@
+# Build output
+build/
+build-*/
+out/
+*.o
+*.obj
+*.a
+*.exe
+compile_commands.json
+CMakeCache.txt
+CMakeFiles/
+
+# The debugger's own runtime caches (pocl kernel-object cache dirs it creates on disk)
+oclgdb-cache-*/
+pocl-cache*/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Claude Code session state (not project content)
+.claude/
+
+# OS cruft
+.DS_Store
+Thumbs.db
