@@ -1,0 +1,21 @@
+# Phase 1 exit criterion: set a breakpoint by line number, run, see it halt, print a
+# variable, step, continue, program finishes normally.
+#
+# The work-item physically halted at an unfiltered breakpoint is the last one to reach
+# it (pocl replicates and runs each work-item's copy of the body in sequence -- see
+# docs/PHASE0-FINDINGS.md, F4), which for this 16-work-item group is global id 15.
+load kernels/vecadd.ocl-run
+compile
+break 10
+run
+# expect: Breakpoint 1
+print av
+# expect: av = 15
+print bv
+# expect: bv = 30
+step
+# expect: Stopped
+print sum
+# expect: sum = 45
+continue
+# expect: exited with code 0

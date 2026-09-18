@@ -1,0 +1,20 @@
+# Phase 2 exit criterion: hit a breakpoint inside a kernel launched with a real
+# multi-work-item NDRange, list which work-items hit it, select different ones, see
+# correctly different variable values for each.
+load kernels/vecadd.ocl-run
+compile
+break 10
+run
+info work-items
+# expect: 16
+select-work-item 3
+# expect: work-item (3,0,0) selected
+print av
+# expect: av = 3
+select-work-item 7
+# expect: work-item (7,0,0) selected
+print av
+# expect: av = 7
+print bv
+# expect: bv = 14
+continue
