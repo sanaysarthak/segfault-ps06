@@ -1,0 +1,312 @@
+=== symbols ===
+0000000000002f30 d _DYNAMIC
+0000000000001000 T _pocl_kernel_vecadd
+0000000000001040 T _pocl_kernel_vecadd_workgroup
+
+=== dynamic symbols ===
+0000000000001000 T _pocl_kernel_vecadd
+0000000000001040 T _pocl_kernel_vecadd_workgroup
+
+=== line -> #addrs ===
+      3 0
+      2 5
+      2 8
+      2 10
+      2 11
+
+=== DIE tree ===
+/tmp/d64/PO/LCAJPPOJEBINJCHIKEEMBGFHNIMIILHKBOKBI/vecadd/64-1-1-goffs0-smallgrid/vecadd.so:	file format elf64-x86-64
+
+.debug_info contents:
+0x00000000: Compile Unit: length = 0x00000151, format = DWARF32, version = 0x0004, abbr_offset = 0x0000, addr_size = 0x08 (next unit at 0x00000155)
+
+0x0000000b: DW_TAG_compile_unit
+              DW_AT_producer	("Ubuntu clang version 16.0.6 (23ubuntu4)")
+              DW_AT_language	(DW_LANG_OpenCL)
+              DW_AT_name	("/tmp/d64/<stdin>")
+              DW_AT_stmt_list	(0x00000000)
+              DW_AT_comp_dir	("/work")
+              DW_AT_low_pc	(0x0000000000001000)
+              DW_AT_high_pc	(0x0000000000001089)
+
+0x0000002a:   DW_TAG_subprogram
+                DW_AT_name	("vecadd")
+                DW_AT_decl_file	("/tmp/d64/tempfile_0ZBZVR.cl")
+                DW_AT_decl_line	(1)
+                DW_AT_calling_convention	(DW_CC_LLVM_OpenCLKernel)
+                DW_AT_external	(true)
+                DW_AT_inline	(DW_INL_inlined)
+
+0x00000033:     DW_TAG_formal_parameter
+                  DW_AT_name	("a")
+                  DW_AT_decl_file	("/tmp/d64/tempfile_0ZBZVR.cl")
+                  DW_AT_decl_line	(1)
+                  DW_AT_type	(0x00000097 "const float *")
+
+0x0000003e:     DW_TAG_formal_parameter
+                  DW_AT_name	("b")
+                  DW_AT_decl_file	("/tmp/d64/tempfile_0ZBZVR.cl")
+                  DW_AT_decl_line	(2)
+                  DW_AT_type	(0x00000097 "const float *")
+
+0x00000049:     DW_TAG_formal_parameter
+                  DW_AT_name	("c")
+                  DW_AT_decl_file	("/tmp/d64/tempfile_0ZBZVR.cl")
+                  DW_AT_decl_line	(3)
+                  DW_AT_type	(0x000000a8 "float *")
+
+0x00000054:     DW_TAG_formal_parameter
+                  DW_AT_name	("n")
+                  DW_AT_decl_file	("/tmp/d64/tempfile_0ZBZVR.cl")
+                  DW_AT_decl_line	(4)
+                  DW_AT_type	(0x000000ad "const int")
+
+0x0000005f:     DW_TAG_variable
+                  DW_AT_name	("av")
+                  DW_AT_decl_file	("/tmp/d64/tempfile_0ZBZVR.cl")
+                  DW_AT_decl_line	(8)
+                  DW_AT_type	(0x000000a1 "float")
+
+0x0000006a:     DW_TAG_variable
+                  DW_AT_name	("sum")
+                  DW_AT_decl_file	("/tmp/d64/tempfile_0ZBZVR.cl")
+                  DW_AT_decl_line	(10)
+                  DW_AT_type	(0x000000a1 "float")
+
+0x00000075:     DW_TAG_variable
+                  DW_AT_name	("gid")
+                  DW_AT_decl_file	("/tmp/d64/tempfile_0ZBZVR.cl")
+                  DW_AT_decl_line	(6)
+                  DW_AT_type	(0x000000b2 "int")
+
+0x00000080:     DW_TAG_variable
+                  DW_AT_name	("lid")
+                  DW_AT_decl_file	("/tmp/d64/tempfile_0ZBZVR.cl")
+                  DW_AT_decl_line	(7)
+                  DW_AT_type	(0x000000b2 "int")
+
+0x0000008b:     DW_TAG_variable
+                  DW_AT_name	("bv")
+                  DW_AT_decl_file	("/tmp/d64/tempfile_0ZBZVR.cl")
+                  DW_AT_decl_line	(9)
+                  DW_AT_type	(0x000000a1 "float")
+
+0x00000096:     NULL
+
+0x00000097:   DW_TAG_pointer_type
+                DW_AT_type	(0x0000009c "const float")
+
+0x0000009c:   DW_TAG_const_type
+                DW_AT_type	(0x000000a1 "float")
+
+0x000000a1:   DW_TAG_base_type
+                DW_AT_name	("float")
+                DW_AT_encoding	(DW_ATE_float)
+                DW_AT_byte_size	(0x04)
+
+0x000000a8:   DW_TAG_pointer_type
+                DW_AT_type	(0x000000a1 "float")
+
+0x000000ad:   DW_TAG_const_type
+                DW_AT_type	(0x000000b2 "int")
+
+0x000000b2:   DW_TAG_base_type
+                DW_AT_name	("int")
+                DW_AT_encoding	(DW_ATE_signed)
+                DW_AT_byte_size	(0x04)
+
+0x000000b9:   DW_TAG_subprogram
+                DW_AT_low_pc	(0x0000000000001000)
+                DW_AT_high_pc	(0x000000000000103d)
+                DW_AT_frame_base	(DW_OP_reg6 RBP)
+                DW_AT_GNU_all_call_sites	(true)
+                DW_AT_abstract_origin	(0x000000fa "_pocl_kernel_vecadd")
+
+0x000000cc:     DW_TAG_inlined_subroutine
+                  DW_AT_abstract_origin	(0x0000002a "vecadd")
+                  DW_AT_low_pc	(0x0000000000001020)
+                  DW_AT_high_pc	(0x0000000000001038)
+                  DW_AT_call_file	("/tmp/d64/tempfile_0ZBZVR.cl")
+                  DW_AT_call_line	(1)
+
+0x000000df:       DW_TAG_formal_parameter
+                    DW_AT_location	(DW_OP_reg5 RDI)
+                    DW_AT_abstract_origin	(0x00000033 "a")
+
+0x000000e6:       DW_TAG_variable
+                    DW_AT_location	(0x00000000: 
+                       [0x0000000000001025, 0x000000000000102a): DW_OP_reg17 XMM0)
+                    DW_AT_abstract_origin	(0x0000005f "av")
+
+0x000000ef:       DW_TAG_variable
+                    DW_AT_location	(0x00000023: 
+                       [0x000000000000102a, 0x0000000000001038): DW_OP_reg17 XMM0)
+                    DW_AT_abstract_origin	(0x0000006a "sum")
+
+0x000000f8:       NULL
+
+0x000000f9:     NULL
+
+0x000000fa:   DW_TAG_subprogram
+                DW_AT_name	("_pocl_kernel_vecadd")
+                DW_AT_decl_file	("/tmp/d64/tempfile_0ZBZVR.cl")
+                DW_AT_decl_line	(1)
+                DW_AT_calling_convention	(DW_CC_LLVM_OpenCLKernel)
+                DW_AT_external	(true)
+                DW_AT_inline	(DW_INL_inlined)
+
+0x00000103:   DW_TAG_subprogram
+                DW_AT_low_pc	(0x0000000000001040)
+                DW_AT_high_pc	(0x0000000000001089)
+                DW_AT_frame_base	(DW_OP_reg7 RSP)
+                DW_AT_GNU_all_call_sites	(true)
+                DW_AT_name	("_pocl_kernel_vecadd_workgroup")
+                DW_AT_decl_file	("/tmp/d64/tempfile_0ZBZVR.cl")
+                DW_AT_decl_line	(1)
+                DW_AT_calling_convention	(DW_CC_LLVM_OpenCLKernel)
+                DW_AT_external	(true)
+
+0x00000119:     DW_TAG_inlined_subroutine
+                  DW_AT_abstract_origin	(0x000000fa "_pocl_kernel_vecadd")
+                  DW_AT_low_pc	(0x0000000000001070)
+                  DW_AT_high_pc	(0x0000000000001088)
+                  DW_AT_call_file	("/tmp/d64/tempfile_0ZBZVR.cl")
+                  DW_AT_call_line	(1)
+
+0x0000012c:       DW_TAG_inlined_subroutine
+                    DW_AT_abstract_origin	(0x0000002a "vecadd")
+                    DW_AT_low_pc	(0x0000000000001070)
+                    DW_AT_high_pc	(0x0000000000001088)
+                    DW_AT_call_file	("/tmp/d64/tempfile_0ZBZVR.cl")
+                    DW_AT_call_line	(1)
+
+0x0000013f:         DW_TAG_variable
+                      DW_AT_location	(0x00000046: 
+                         [0x0000000000001075, 0x000000000000107a): DW_OP_reg17 XMM0)
+                      DW_AT_abstract_origin	(0x0000005f "av")
+
+0x00000148:         DW_TAG_variable
+                      DW_AT_location	(0x00000069: 
+                         [0x000000000000107a, 0x0000000000001088): DW_OP_reg17 XMM0)
+                      DW_AT_abstract_origin	(0x0000006a "sum")
+
+0x00000151:         NULL
+
+0x00000152:       NULL
+
+0x00000153:     NULL
+
+0x00000154:   NULL
+
+=== loc lists ===
+/tmp/d64/PO/LCAJPPOJEBINJCHIKEEMBGFHNIMIILHKBOKBI/vecadd/64-1-1-goffs0-smallgrid/vecadd.so:	file format elf64-x86-64
+
+.debug_loc contents:
+0x00000000: 
+            (0x0000000000000025, 0x000000000000002a): DW_OP_reg17 XMM0
+
+0x00000023: 
+            (0x000000000000002a, 0x0000000000000038): DW_OP_reg17 XMM0
+
+0x00000046: 
+            (0x0000000000000075, 0x000000000000007a): DW_OP_reg17 XMM0
+
+0x00000069: 
+            (0x000000000000007a, 0x0000000000000088): DW_OP_reg17 XMM0
+
+=== line table ===
+/tmp/d64/PO/LCAJPPOJEBINJCHIKEEMBGFHNIMIILHKBOKBI/vecadd/64-1-1-goffs0-smallgrid/vecadd.so:	file format elf64-x86-64
+
+.debug_line contents:
+debug_line[0x00000000]
+Line table prologue:
+    total_length: 0x0000006d
+          format: DWARF32
+         version: 4
+ prologue_length: 0x00000033
+ min_inst_length: 1
+max_ops_per_inst: 1
+ default_is_stmt: 1
+       line_base: -5
+      line_range: 14
+     opcode_base: 13
+standard_opcode_lengths[DW_LNS_copy] = 0
+standard_opcode_lengths[DW_LNS_advance_pc] = 1
+standard_opcode_lengths[DW_LNS_advance_line] = 1
+standard_opcode_lengths[DW_LNS_set_file] = 1
+standard_opcode_lengths[DW_LNS_set_column] = 1
+standard_opcode_lengths[DW_LNS_negate_stmt] = 0
+standard_opcode_lengths[DW_LNS_set_basic_block] = 0
+standard_opcode_lengths[DW_LNS_const_add_pc] = 0
+standard_opcode_lengths[DW_LNS_fixed_advance_pc] = 1
+standard_opcode_lengths[DW_LNS_set_prologue_end] = 0
+standard_opcode_lengths[DW_LNS_set_epilogue_begin] = 0
+standard_opcode_lengths[DW_LNS_set_isa] = 1
+include_directories[  1] = "/tmp/d64"
+file_names[  1]:
+           name: "tempfile_0ZBZVR.cl"
+      dir_index: 1
+       mod_time: 0x00000000
+         length: 0x00000000
+
+Address            Line   Column File   ISA Discriminator OpIndex Flags
+------------------ ------ ------ ------ --- ------------- ------- -------------
+0x0000000000001000      5      0      1   0             0       0  is_stmt
+0x0000000000001020      8     16      1   0             0       0  is_stmt prologue_end
+0x0000000000001025     10     20      1   0             0       0  is_stmt
+0x000000000000102a     11     12      1   0             0       0  is_stmt
+0x0000000000001036      0     12      1   0             0       0 
+0x0000000000001040      5      0      1   0             0       0  is_stmt
+0x0000000000001070      8     16      1   0             0       0  is_stmt prologue_end
+0x0000000000001075     10     20      1   0             0       0  is_stmt
+0x000000000000107a     11     12      1   0             0       0  is_stmt
+0x0000000000001086      0     12      1   0             0       0 
+0x0000000000001089      0     12      1   0             0       0  end_sequence
+
+
+=== disasm ===
+Disassembly of section .text:
+
+0000000000001000 <_pocl_kernel_vecadd>:
+    1000:	push   %rbp
+    1001:	mov    %rsp,%rbp
+    1004:	and    $0xfffffffffffffff8,%rsp
+    1008:	shl    $0x6,%r9d
+    100c:	movslq %r9d,%r8
+    100f:	lea    (%rdx,%r8,4),%rax
+    1013:	lea    (%rsi,%r8,4),%rcx
+    1017:	lea    (%rdi,%r8,4),%rdx
+    101b:	xor    %esi,%esi
+    101d:	nopl   (%rax)
+    1020:	vmovss (%rdx,%rsi,4),%xmm0
+    1025:	vaddss (%rcx,%rsi,4),%xmm0,%xmm0
+    102a:	vmovss %xmm0,(%rax,%rsi,4)
+    102f:	inc    %rsi
+    1032:	cmp    $0x40,%rsi
+    1036:	jne    1020 <_pocl_kernel_vecadd+0x20>
+    1038:	mov    %rbp,%rsp
+    103b:	pop    %rbp
+    103c:	ret
+    103d:	nopl   (%rax)
+
+0000000000001040 <_pocl_kernel_vecadd_workgroup>:
+    1040:	mov    (%rdi),%rsi
+    1043:	mov    0x8(%rdi),%r8
+    1047:	mov    0x10(%rdi),%rcx
+    104b:	shl    $0x6,%edx
+    104e:	movslq %edx,%rax
+    1051:	shl    $0x2,%rax
+    1055:	mov    (%rcx),%rcx
+    1058:	add    %rax,%rcx
+    105b:	mov    (%r8),%rdx
+    105e:	add    %rax,%rdx
+    1061:	add    (%rsi),%rax
+    1064:	xor    %esi,%esi
+    1066:	cs nopw 0x0(%rax,%rax,1)
+    1070:	vmovss (%rax,%rsi,4),%xmm0
+    1075:	vaddss (%rdx,%rsi,4),%xmm0,%xmm0
+    107a:	vmovss %xmm0,(%rcx,%rsi,4)
+    107f:	inc    %rsi
+    1082:	cmp    $0x40,%rsi
+    1086:	jne    1070 <_pocl_kernel_vecadd_workgroup+0x30>
+    1088:	ret

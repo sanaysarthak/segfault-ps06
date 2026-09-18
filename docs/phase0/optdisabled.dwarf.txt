@@ -1,0 +1,598 @@
+### build options: -g -cl-opt-disable   extra env: 
+### object: GL/GJDMPEHNLCJENIPDOAJKMDOPDJJAPBLGCBDNH/vecadd/16-1-1-goffs0-smallgrid/vecadd.so
+
+=== ELF sections ===
+  [Nr] Name              Type             Address           Offset
+  [ 7] .text             PROGBITS         0000000000001020  00001020
+  [12] .debug_info       PROGBITS         0000000000000000  00003030
+  [13] .debug_abbrev     PROGBITS         0000000000000000  0000315d
+  [14] .debug_line       PROGBITS         0000000000000000  00003200
+  [15] .debug_frame      PROGBITS         0000000000000000  00003318
+  [16] .debug_str        PROGBITS         0000000000000000  00003378
+  [17] .debug_loc        PROGBITS         0000000000000000  00003419
+
+=== symbols ===
+0000000000002ed8 d _DYNAMIC
+0000000000002fe8 d _GLOBAL_OFFSET_TABLE_
+0000000000001020 T _pocl_kernel_vecadd
+0000000000001250 T _pocl_kernel_vecadd_workgroup
+
+=== source line -> number of distinct machine addresses ===
+      2 1
+      2 5
+     16 8
+     16 9
+     16 10
+     16 11
+
+=== DIE tree ===
+/tmp/cache_optdisabled/GL/GJDMPEHNLCJENIPDOAJKMDOPDJJAPBLGCBDNH/vecadd/16-1-1-goffs0-smallgrid/vecadd.so:	file format elf64-x86-64
+
+.debug_info contents:
+0x00000000: Compile Unit: length = 0x00000129, format = DWARF32, version = 0x0004, abbr_offset = 0x0000, addr_size = 0x08 (next unit at 0x0000012d)
+
+0x0000000b: DW_TAG_compile_unit
+              DW_AT_producer	("Ubuntu clang version 16.0.6 (23ubuntu4)")
+              DW_AT_language	(DW_LANG_OpenCL)
+              DW_AT_name	("/tmp/cache_optdisabled/<stdin>")
+              DW_AT_stmt_list	(0x00000000)
+              DW_AT_comp_dir	("/work")
+              DW_AT_low_pc	(0x0000000000001020)
+              DW_AT_high_pc	(0x0000000000001278)
+
+0x0000002a:   DW_TAG_subprogram
+                DW_AT_name	("vecadd")
+                DW_AT_decl_file	("/tmp/cache_optdisabled/tempfile_oqtblc.cl")
+                DW_AT_decl_line	(1)
+                DW_AT_calling_convention	(DW_CC_LLVM_OpenCLKernel)
+                DW_AT_external	(true)
+                DW_AT_inline	(DW_INL_inlined)
+
+0x00000033:     DW_TAG_formal_parameter
+                  DW_AT_name	("a")
+                  DW_AT_decl_file	("/tmp/cache_optdisabled/tempfile_oqtblc.cl")
+                  DW_AT_decl_line	(1)
+                  DW_AT_type	(0x0000008c "const float *")
+
+0x0000003e:     DW_TAG_formal_parameter
+                  DW_AT_name	("b")
+                  DW_AT_decl_file	("/tmp/cache_optdisabled/tempfile_oqtblc.cl")
+                  DW_AT_decl_line	(2)
+                  DW_AT_type	(0x0000008c "const float *")
+
+0x00000049:     DW_TAG_formal_parameter
+                  DW_AT_name	("c")
+                  DW_AT_decl_file	("/tmp/cache_optdisabled/tempfile_oqtblc.cl")
+                  DW_AT_decl_line	(3)
+                  DW_AT_type	(0x0000009d "float *")
+
+0x00000054:     DW_TAG_variable
+                  DW_AT_name	("lid")
+                  DW_AT_decl_file	("/tmp/cache_optdisabled/tempfile_oqtblc.cl")
+                  DW_AT_decl_line	(7)
+                  DW_AT_type	(0x000000a2 "int")
+
+0x0000005f:     DW_TAG_variable
+                  DW_AT_name	("gid")
+                  DW_AT_decl_file	("/tmp/cache_optdisabled/tempfile_oqtblc.cl")
+                  DW_AT_decl_line	(6)
+                  DW_AT_type	(0x000000a2 "int")
+
+0x0000006a:     DW_TAG_variable
+                  DW_AT_name	("av")
+                  DW_AT_decl_file	("/tmp/cache_optdisabled/tempfile_oqtblc.cl")
+                  DW_AT_decl_line	(8)
+                  DW_AT_type	(0x00000096 "float")
+
+0x00000075:     DW_TAG_variable
+                  DW_AT_name	("bv")
+                  DW_AT_decl_file	("/tmp/cache_optdisabled/tempfile_oqtblc.cl")
+                  DW_AT_decl_line	(9)
+                  DW_AT_type	(0x00000096 "float")
+
+0x00000080:     DW_TAG_variable
+                  DW_AT_name	("sum")
+                  DW_AT_decl_file	("/tmp/cache_optdisabled/tempfile_oqtblc.cl")
+                  DW_AT_decl_line	(10)
+                  DW_AT_type	(0x00000096 "float")
+
+0x0000008b:     NULL
+
+0x0000008c:   DW_TAG_pointer_type
+                DW_AT_type	(0x00000091 "const float")
+
+0x00000091:   DW_TAG_const_type
+                DW_AT_type	(0x00000096 "float")
+
+0x00000096:   DW_TAG_base_type
+                DW_AT_name	("float")
+                DW_AT_encoding	(DW_ATE_float)
+                DW_AT_byte_size	(0x04)
+
+0x0000009d:   DW_TAG_pointer_type
+                DW_AT_type	(0x00000096 "float")
+
+0x000000a2:   DW_TAG_base_type
+                DW_AT_name	("int")
+                DW_AT_encoding	(DW_ATE_signed)
+                DW_AT_byte_size	(0x04)
+
+0x000000a9:   DW_TAG_subprogram
+                DW_AT_low_pc	(0x0000000000001020)
+                DW_AT_high_pc	(0x0000000000001249)
+                DW_AT_frame_base	(DW_OP_reg6 RBP)
+                DW_AT_name	("_pocl_kernel_vecadd")
+                DW_AT_decl_file	("/tmp/cache_optdisabled/tempfile_oqtblc.cl")
+                DW_AT_decl_line	(1)
+                DW_AT_calling_convention	(DW_CC_LLVM_OpenCLKernel)
+                DW_AT_external	(true)
+
+0x000000bf:     DW_TAG_inlined_subroutine
+                  DW_AT_abstract_origin	(0x0000002a "vecadd")
+                  DW_AT_low_pc	(0x000000000000102f)
+                  DW_AT_high_pc	(0x0000000000001249)
+                  DW_AT_call_file	("/tmp/cache_optdisabled/tempfile_oqtblc.cl")
+                  DW_AT_call_line	(1)
+
+0x000000d2:       DW_TAG_formal_parameter
+                    DW_AT_location	(DW_OP_reg5 RDI)
+                    DW_AT_abstract_origin	(0x00000033 "a")
+
+0x000000d9:       DW_TAG_formal_parameter
+                    DW_AT_location	(DW_OP_reg4 RSI)
+                    DW_AT_abstract_origin	(0x0000003e "b")
+
+0x000000e0:       DW_TAG_formal_parameter
+                    DW_AT_location	(DW_OP_reg1 RDX)
+                    DW_AT_abstract_origin	(0x00000049 "c")
+
+0x000000e7:       DW_TAG_variable
+                    DW_AT_location	(0x00000000: 
+                       [0x000000000000102f, 0x000000000000104d): DW_OP_consts +0, DW_OP_stack_value
+                       [0x000000000000104d, 0x000000000000106f): DW_OP_consts +1, DW_OP_stack_value
+                       [0x000000000000106f, 0x0000000000001091): DW_OP_consts +2, DW_OP_stack_value
+                       [0x0000000000001091, 0x00000000000010b3): DW_OP_consts +3, DW_OP_stack_value
+                       [0x00000000000010b3, 0x00000000000010d5): DW_OP_consts +4, DW_OP_stack_value
+                       [0x00000000000010d5, 0x00000000000010f7): DW_OP_consts +5, DW_OP_stack_value
+                       [0x00000000000010f7, 0x0000000000001119): DW_OP_consts +6, DW_OP_stack_value
+                       [0x0000000000001119, 0x000000000000113b): DW_OP_consts +7, DW_OP_stack_value
+                       [0x000000000000113b, 0x000000000000115d): DW_OP_consts +8, DW_OP_stack_value
+                       [0x000000000000115d, 0x000000000000117f): DW_OP_consts +9, DW_OP_stack_value
+                       [0x000000000000117f, 0x00000000000011a1): DW_OP_consts +10, DW_OP_stack_value
+                       [0x00000000000011a1, 0x00000000000011c3): DW_OP_consts +11, DW_OP_stack_value
+                       [0x00000000000011c3, 0x00000000000011e5): DW_OP_consts +12, DW_OP_stack_value
+                       [0x00000000000011e5, 0x0000000000001207): DW_OP_consts +13, DW_OP_stack_value
+                       [0x0000000000001207, 0x0000000000001229): DW_OP_consts +14, DW_OP_stack_value
+                       [0x0000000000001229, 0x0000000000001249): DW_OP_consts +15, DW_OP_stack_value)
+                    DW_AT_abstract_origin	(0x00000054 "lid")
+
+0x000000f0:       DW_TAG_variable
+                    DW_AT_location	(0x00000160: 
+                       [0x000000000000102f, 0x000000000000104d): DW_OP_breg0 RAX+0, DW_OP_stack_value
+                       [0x000000000000104d, 0x000000000000106f): DW_OP_breg0 RAX+0, DW_OP_lit1, DW_OP_or, DW_OP_stack_value
+                       [0x000000000000106f, 0x0000000000001091): DW_OP_breg0 RAX+0, DW_OP_lit2, DW_OP_or, DW_OP_stack_value
+                       [0x0000000000001091, 0x00000000000010b3): DW_OP_breg0 RAX+0, DW_OP_lit3, DW_OP_or, DW_OP_stack_value
+                       [0x00000000000010b3, 0x00000000000010d5): DW_OP_breg0 RAX+0, DW_OP_lit4, DW_OP_or, DW_OP_stack_value
+                       [0x00000000000010d5, 0x00000000000010f7): DW_OP_breg0 RAX+0, DW_OP_lit5, DW_OP_or, DW_OP_stack_value
+                       [0x00000000000010f7, 0x0000000000001119): DW_OP_breg0 RAX+0, DW_OP_lit6, DW_OP_or, DW_OP_stack_value
+                       [0x0000000000001119, 0x000000000000113b): DW_OP_breg0 RAX+0, DW_OP_lit7, DW_OP_or, DW_OP_stack_value
+                       [0x000000000000113b, 0x000000000000115d): DW_OP_breg0 RAX+0, DW_OP_lit8, DW_OP_or, DW_OP_stack_value
+                       [0x000000000000115d, 0x000000000000117f): DW_OP_breg0 RAX+0, DW_OP_lit9, DW_OP_or, DW_OP_stack_value
+                       [0x000000000000117f, 0x00000000000011a1): DW_OP_breg0 RAX+0, DW_OP_lit10, DW_OP_or, DW_OP_stack_value
+                       [0x00000000000011a1, 0x00000000000011c3): DW_OP_breg0 RAX+0, DW_OP_lit11, DW_OP_or, DW_OP_stack_value
+                       [0x00000000000011c3, 0x00000000000011e5): DW_OP_breg0 RAX+0, DW_OP_lit12, DW_OP_or, DW_OP_stack_value
+                       [0x00000000000011e5, 0x0000000000001207): DW_OP_breg0 RAX+0, DW_OP_lit13, DW_OP_or, DW_OP_stack_value
+                       [0x0000000000001207, 0x0000000000001229): DW_OP_breg0 RAX+0, DW_OP_lit14, DW_OP_or, DW_OP_stack_value
+                       [0x0000000000001229, 0x000000000000122d): DW_OP_breg0 RAX+0, DW_OP_constu 0xf00000000, DW_OP_or, DW_OP_stack_value)
+                    DW_AT_abstract_origin	(0x0000005f "gid")
+
+0x000000f9:       DW_TAG_variable
+                    DW_AT_location	(0x000002e4: 
+                       [0x000000000000103f, 0x0000000000001048): DW_OP_reg17 XMM0
+                       [0x0000000000001061, 0x000000000000106a): DW_OP_reg17 XMM0
+                       [0x0000000000001083, 0x000000000000108c): DW_OP_reg17 XMM0
+                       [0x00000000000010a5, 0x00000000000010ae): DW_OP_reg17 XMM0
+                       [0x00000000000010c7, 0x00000000000010d0): DW_OP_reg17 XMM0
+                       [0x00000000000010e9, 0x00000000000010f2): DW_OP_reg17 XMM0
+                       [0x000000000000110b, 0x0000000000001114): DW_OP_reg17 XMM0
+                       [0x000000000000112d, 0x0000000000001136): DW_OP_reg17 XMM0
+                       [0x000000000000114f, 0x0000000000001158): DW_OP_reg17 XMM0
+                       [0x0000000000001171, 0x000000000000117a): DW_OP_reg17 XMM0
+                       [0x0000000000001193, 0x000000000000119c): DW_OP_reg17 XMM0
+                       [0x00000000000011b5, 0x00000000000011be): DW_OP_reg17 XMM0
+                       [0x00000000000011d7, 0x00000000000011e0): DW_OP_reg17 XMM0
+                       [0x00000000000011f9, 0x0000000000001202): DW_OP_reg17 XMM0
+                       [0x0000000000001219, 0x0000000000001223): DW_OP_reg17 XMM0
+                       [0x0000000000001236, 0x000000000000123f): DW_OP_reg17 XMM0)
+                    DW_AT_abstract_origin	(0x0000006a "av")
+
+0x00000102:       DW_TAG_variable
+                    DW_AT_location	(0x00000424: 
+                       [0x0000000000001044, 0x0000000000001249): DW_OP_reg18 XMM1)
+                    DW_AT_abstract_origin	(0x00000075 "bv")
+
+0x0000010b:       DW_TAG_variable
+                    DW_AT_location	(0x00000447: 
+                       [0x0000000000001048, 0x0000000000001061): DW_OP_reg17 XMM0
+                       [0x000000000000106a, 0x0000000000001083): DW_OP_reg17 XMM0
+                       [0x000000000000108c, 0x00000000000010a5): DW_OP_reg17 XMM0
+                       [0x00000000000010ae, 0x00000000000010c7): DW_OP_reg17 XMM0
+                       [0x00000000000010d0, 0x00000000000010e9): DW_OP_reg17 XMM0
+                       [0x00000000000010f2, 0x000000000000110b): DW_OP_reg17 XMM0
+                       [0x0000000000001114, 0x000000000000112d): DW_OP_reg17 XMM0
+                       [0x0000000000001136, 0x000000000000114f): DW_OP_reg17 XMM0
+                       [0x0000000000001158, 0x0000000000001171): DW_OP_reg17 XMM0
+                       [0x000000000000117a, 0x0000000000001193): DW_OP_reg17 XMM0
+                       [0x000000000000119c, 0x00000000000011b5): DW_OP_reg17 XMM0
+                       [0x00000000000011be, 0x00000000000011d7): DW_OP_reg17 XMM0
+                       [0x00000000000011e0, 0x00000000000011f9): DW_OP_reg17 XMM0
+                       [0x0000000000001202, 0x0000000000001219): DW_OP_reg17 XMM0
+                       [0x0000000000001223, 0x0000000000001236): DW_OP_reg17 XMM0
+                       [0x000000000000123f, 0x0000000000001249): DW_OP_reg17 XMM0)
+                    DW_AT_abstract_origin	(0x00000080 "sum")
+
+0x00000114:       NULL
+
+0x00000115:     NULL
+
+0x00000116:   DW_TAG_subprogram
+                DW_AT_low_pc	(0x0000000000001250)
+                DW_AT_high_pc	(0x0000000000001278)
+                DW_AT_frame_base	(DW_OP_reg7 RSP)
+                DW_AT_name	("_pocl_kernel_vecadd_workgroup")
+                DW_AT_decl_file	("/tmp/cache_optdisabled/tempfile_oqtblc.cl")
+                DW_AT_decl_line	(1)
+                DW_AT_calling_convention	(DW_CC_LLVM_OpenCLKernel)
+                DW_AT_external	(true)
+
+0x0000012c:   NULL
+
+=== location lists ===
+/tmp/cache_optdisabled/GL/GJDMPEHNLCJENIPDOAJKMDOPDJJAPBLGCBDNH/vecadd/16-1-1-goffs0-smallgrid/vecadd.so:	file format elf64-x86-64
+
+.debug_loc contents:
+0x00000000: 
+            (0x000000000000000f, 0x000000000000002d): DW_OP_consts +0, DW_OP_stack_value
+            (0x000000000000002d, 0x000000000000004f): DW_OP_consts +1, DW_OP_stack_value
+            (0x000000000000004f, 0x0000000000000071): DW_OP_consts +2, DW_OP_stack_value
+            (0x0000000000000071, 0x0000000000000093): DW_OP_consts +3, DW_OP_stack_value
+            (0x0000000000000093, 0x00000000000000b5): DW_OP_consts +4, DW_OP_stack_value
+            (0x00000000000000b5, 0x00000000000000d7): DW_OP_consts +5, DW_OP_stack_value
+            (0x00000000000000d7, 0x00000000000000f9): DW_OP_consts +6, DW_OP_stack_value
+            (0x00000000000000f9, 0x000000000000011b): DW_OP_consts +7, DW_OP_stack_value
+            (0x000000000000011b, 0x000000000000013d): DW_OP_consts +8, DW_OP_stack_value
+            (0x000000000000013d, 0x000000000000015f): DW_OP_consts +9, DW_OP_stack_value
+            (0x000000000000015f, 0x0000000000000181): DW_OP_consts +10, DW_OP_stack_value
+            (0x0000000000000181, 0x00000000000001a3): DW_OP_consts +11, DW_OP_stack_value
+            (0x00000000000001a3, 0x00000000000001c5): DW_OP_consts +12, DW_OP_stack_value
+            (0x00000000000001c5, 0x00000000000001e7): DW_OP_consts +13, DW_OP_stack_value
+            (0x00000000000001e7, 0x0000000000000209): DW_OP_consts +14, DW_OP_stack_value
+            (0x0000000000000209, 0x0000000000000229): DW_OP_consts +15, DW_OP_stack_value
+
+0x00000160: 
+            (0x000000000000000f, 0x000000000000002d): DW_OP_breg0 RAX+0, DW_OP_stack_value
+            (0x000000000000002d, 0x000000000000004f): DW_OP_breg0 RAX+0, DW_OP_lit1, DW_OP_or, DW_OP_stack_value
+            (0x000000000000004f, 0x0000000000000071): DW_OP_breg0 RAX+0, DW_OP_lit2, DW_OP_or, DW_OP_stack_value
+            (0x0000000000000071, 0x0000000000000093): DW_OP_breg0 RAX+0, DW_OP_lit3, DW_OP_or, DW_OP_stack_value
+            (0x0000000000000093, 0x00000000000000b5): DW_OP_breg0 RAX+0, DW_OP_lit4, DW_OP_or, DW_OP_stack_value
+            (0x00000000000000b5, 0x00000000000000d7): DW_OP_breg0 RAX+0, DW_OP_lit5, DW_OP_or, DW_OP_stack_value
+            (0x00000000000000d7, 0x00000000000000f9): DW_OP_breg0 RAX+0, DW_OP_lit6, DW_OP_or, DW_OP_stack_value
+            (0x00000000000000f9, 0x000000000000011b): DW_OP_breg0 RAX+0, DW_OP_lit7, DW_OP_or, DW_OP_stack_value
+            (0x000000000000011b, 0x000000000000013d): DW_OP_breg0 RAX+0, DW_OP_lit8, DW_OP_or, DW_OP_stack_value
+            (0x000000000000013d, 0x000000000000015f): DW_OP_breg0 RAX+0, DW_OP_lit9, DW_OP_or, DW_OP_stack_value
+            (0x000000000000015f, 0x0000000000000181): DW_OP_breg0 RAX+0, DW_OP_lit10, DW_OP_or, DW_OP_stack_value
+            (0x0000000000000181, 0x00000000000001a3): DW_OP_breg0 RAX+0, DW_OP_lit11, DW_OP_or, DW_OP_stack_value
+            (0x00000000000001a3, 0x00000000000001c5): DW_OP_breg0 RAX+0, DW_OP_lit12, DW_OP_or, DW_OP_stack_value
+            (0x00000000000001c5, 0x00000000000001e7): DW_OP_breg0 RAX+0, DW_OP_lit13, DW_OP_or, DW_OP_stack_value
+            (0x00000000000001e7, 0x0000000000000209): DW_OP_breg0 RAX+0, DW_OP_lit14, DW_OP_or, DW_OP_stack_value
+            (0x0000000000000209, 0x000000000000020d): DW_OP_breg0 RAX+0, DW_OP_constu 0xf00000000, DW_OP_or, DW_OP_stack_value
+
+0x000002e4: 
+            (0x000000000000001f, 0x0000000000000028): DW_OP_reg17 XMM0
+            (0x0000000000000041, 0x000000000000004a): DW_OP_reg17 XMM0
+            (0x0000000000000063, 0x000000000000006c): DW_OP_reg17 XMM0
+            (0x0000000000000085, 0x000000000000008e): DW_OP_reg17 XMM0
+            (0x00000000000000a7, 0x00000000000000b0): DW_OP_reg17 XMM0
+            (0x00000000000000c9, 0x00000000000000d2): DW_OP_reg17 XMM0
+            (0x00000000000000eb, 0x00000000000000f4): DW_OP_reg17 XMM0
+            (0x000000000000010d, 0x0000000000000116): DW_OP_reg17 XMM0
+            (0x000000000000012f, 0x0000000000000138): DW_OP_reg17 XMM0
+            (0x0000000000000151, 0x000000000000015a): DW_OP_reg17 XMM0
+            (0x0000000000000173, 0x000000000000017c): DW_OP_reg17 XMM0
+            (0x0000000000000195, 0x000000000000019e): DW_OP_reg17 XMM0
+            (0x00000000000001b7, 0x00000000000001c0): DW_OP_reg17 XMM0
+            (0x00000000000001d9, 0x00000000000001e2): DW_OP_reg17 XMM0
+            (0x00000000000001f9, 0x0000000000000203): DW_OP_reg17 XMM0
+            (0x0000000000000216, 0x000000000000021f): DW_OP_reg17 XMM0
+
+0x00000424: 
+            (0x0000000000000024, 0x0000000000000229): DW_OP_reg18 XMM1
+
+0x00000447: 
+            (0x0000000000000028, 0x0000000000000041): DW_OP_reg17 XMM0
+            (0x000000000000004a, 0x0000000000000063): DW_OP_reg17 XMM0
+            (0x000000000000006c, 0x0000000000000085): DW_OP_reg17 XMM0
+            (0x000000000000008e, 0x00000000000000a7): DW_OP_reg17 XMM0
+            (0x00000000000000b0, 0x00000000000000c9): DW_OP_reg17 XMM0
+            (0x00000000000000d2, 0x00000000000000eb): DW_OP_reg17 XMM0
+            (0x00000000000000f4, 0x000000000000010d): DW_OP_reg17 XMM0
+            (0x0000000000000116, 0x000000000000012f): DW_OP_reg17 XMM0
+            (0x0000000000000138, 0x0000000000000151): DW_OP_reg17 XMM0
+            (0x000000000000015a, 0x0000000000000173): DW_OP_reg17 XMM0
+            (0x000000000000017c, 0x0000000000000195): DW_OP_reg17 XMM0
+            (0x000000000000019e, 0x00000000000001b7): DW_OP_reg17 XMM0
+            (0x00000000000001c0, 0x00000000000001d9): DW_OP_reg17 XMM0
+            (0x00000000000001e2, 0x00000000000001f9): DW_OP_reg17 XMM0
+            (0x0000000000000203, 0x0000000000000216): DW_OP_reg17 XMM0
+            (0x000000000000021f, 0x0000000000000229): DW_OP_reg17 XMM0
+
+=== line table ===
+/tmp/cache_optdisabled/GL/GJDMPEHNLCJENIPDOAJKMDOPDJJAPBLGCBDNH/vecadd/16-1-1-goffs0-smallgrid/vecadd.so:	file format elf64-x86-64
+
+.debug_line contents:
+debug_line[0x00000000]
+Line table prologue:
+    total_length: 0x00000110
+          format: DWARF32
+         version: 4
+ prologue_length: 0x00000041
+ min_inst_length: 1
+max_ops_per_inst: 1
+ default_is_stmt: 1
+       line_base: -5
+      line_range: 14
+     opcode_base: 13
+standard_opcode_lengths[DW_LNS_copy] = 0
+standard_opcode_lengths[DW_LNS_advance_pc] = 1
+standard_opcode_lengths[DW_LNS_advance_line] = 1
+standard_opcode_lengths[DW_LNS_set_file] = 1
+standard_opcode_lengths[DW_LNS_set_column] = 1
+standard_opcode_lengths[DW_LNS_negate_stmt] = 0
+standard_opcode_lengths[DW_LNS_set_basic_block] = 0
+standard_opcode_lengths[DW_LNS_const_add_pc] = 0
+standard_opcode_lengths[DW_LNS_fixed_advance_pc] = 1
+standard_opcode_lengths[DW_LNS_set_prologue_end] = 0
+standard_opcode_lengths[DW_LNS_set_epilogue_begin] = 0
+standard_opcode_lengths[DW_LNS_set_isa] = 1
+include_directories[  1] = "/tmp/cache_optdisabled"
+file_names[  1]:
+           name: "tempfile_oqtblc.cl"
+      dir_index: 1
+       mod_time: 0x00000000
+         length: 0x00000000
+
+Address            Line   Column File   ISA Discriminator OpIndex Flags
+------------------ ------ ------ ------ --- ------------- ------- -------------
+0x0000000000001020      5      0      1   0             0       0  is_stmt
+0x000000000000102f      8     16      1   0             0       0  is_stmt prologue_end
+0x000000000000103f      9     16      1   0             0       0  is_stmt
+0x0000000000001044     10     20      1   0             0       0  is_stmt
+0x0000000000001048     11     12      1   0             0       0  is_stmt
+0x000000000000104d      8     16      1   0             0       0  is_stmt
+0x0000000000001061      9     16      1   0             0       0  is_stmt
+0x0000000000001066     10     20      1   0             0       0  is_stmt
+0x000000000000106a     11     12      1   0             0       0  is_stmt
+0x000000000000106f      8     16      1   0             0       0  is_stmt
+0x0000000000001083      9     16      1   0             0       0  is_stmt
+0x0000000000001088     10     20      1   0             0       0  is_stmt
+0x000000000000108c     11     12      1   0             0       0  is_stmt
+0x0000000000001091      8     16      1   0             0       0  is_stmt
+0x00000000000010a5      9     16      1   0             0       0  is_stmt
+0x00000000000010aa     10     20      1   0             0       0  is_stmt
+0x00000000000010ae     11     12      1   0             0       0  is_stmt
+0x00000000000010b3      8     16      1   0             0       0  is_stmt
+0x00000000000010c7      9     16      1   0             0       0  is_stmt
+0x00000000000010cc     10     20      1   0             0       0  is_stmt
+0x00000000000010d0     11     12      1   0             0       0  is_stmt
+0x00000000000010d5      8     16      1   0             0       0  is_stmt
+0x00000000000010e9      9     16      1   0             0       0  is_stmt
+0x00000000000010ee     10     20      1   0             0       0  is_stmt
+0x00000000000010f2     11     12      1   0             0       0  is_stmt
+0x00000000000010f7      8     16      1   0             0       0  is_stmt
+0x000000000000110b      9     16      1   0             0       0  is_stmt
+0x0000000000001110     10     20      1   0             0       0  is_stmt
+0x0000000000001114     11     12      1   0             0       0  is_stmt
+0x0000000000001119      8     16      1   0             0       0  is_stmt
+0x000000000000112d      9     16      1   0             0       0  is_stmt
+0x0000000000001132     10     20      1   0             0       0  is_stmt
+0x0000000000001136     11     12      1   0             0       0  is_stmt
+0x000000000000113b      8     16      1   0             0       0  is_stmt
+0x000000000000114f      9     16      1   0             0       0  is_stmt
+0x0000000000001154     10     20      1   0             0       0  is_stmt
+0x0000000000001158     11     12      1   0             0       0  is_stmt
+0x000000000000115d      8     16      1   0             0       0  is_stmt
+0x0000000000001171      9     16      1   0             0       0  is_stmt
+0x0000000000001176     10     20      1   0             0       0  is_stmt
+0x000000000000117a     11     12      1   0             0       0  is_stmt
+0x000000000000117f      8     16      1   0             0       0  is_stmt
+0x0000000000001193      9     16      1   0             0       0  is_stmt
+0x0000000000001198     10     20      1   0             0       0  is_stmt
+0x000000000000119c     11     12      1   0             0       0  is_stmt
+0x00000000000011a1      8     16      1   0             0       0  is_stmt
+0x00000000000011b5      9     16      1   0             0       0  is_stmt
+0x00000000000011ba     10     20      1   0             0       0  is_stmt
+0x00000000000011be     11     12      1   0             0       0  is_stmt
+0x00000000000011c3      8     16      1   0             0       0  is_stmt
+0x00000000000011d7      9     16      1   0             0       0  is_stmt
+0x00000000000011dc     10     20      1   0             0       0  is_stmt
+0x00000000000011e0     11     12      1   0             0       0  is_stmt
+0x00000000000011e5      8     16      1   0             0       0  is_stmt
+0x00000000000011f9      9     16      1   0             0       0  is_stmt
+0x00000000000011fe     10     20      1   0             0       0  is_stmt
+0x0000000000001202     11     12      1   0             0       0  is_stmt
+0x0000000000001207      8     16      1   0             0       0  is_stmt
+0x0000000000001219      9     16      1   0             0       0  is_stmt
+0x000000000000121f     10     20      1   0             0       0  is_stmt
+0x0000000000001223     11     12      1   0             0       0  is_stmt
+0x0000000000001229      8     16      1   0             0       0  is_stmt
+0x0000000000001236      9     16      1   0             0       0  is_stmt
+0x000000000000123b     10     20      1   0             0       0  is_stmt
+0x000000000000123f     11     12      1   0             0       0  is_stmt
+0x0000000000001250      5      0      1   0             0       0  is_stmt
+0x000000000000126b      1      0      1   0             0       0  is_stmt prologue_end
+0x0000000000001278      1      0      1   0             0       0  is_stmt end_sequence
+
+
+=== disassembly ===
+Disassembly of section .plt:
+
+0000000000001000 <_pocl_kernel_vecadd@plt-0x10>:
+    1000:	push   0x1fea(%rip)        # 2ff0 <_GLOBAL_OFFSET_TABLE_+0x8>
+    1006:	jmp    *0x1fec(%rip)        # 2ff8 <_GLOBAL_OFFSET_TABLE_+0x10>
+    100c:	nopl   0x0(%rax)
+
+0000000000001010 <_pocl_kernel_vecadd@plt>:
+    1010:	jmp    *0x1fea(%rip)        # 3000 <_pocl_kernel_vecadd+0x1fe0>
+    1016:	push   $0x0
+    101b:	jmp    1000 <_pocl_kernel_vecadd@plt-0x10>
+
+Disassembly of section .text:
+
+0000000000001020 <_pocl_kernel_vecadd>:
+    1020:	push   %rbp
+    1021:	mov    %rsp,%rbp
+    1024:	and    $0xfffffffffffffff8,%rsp
+    1028:	mov    %r9,%rax
+    102b:	shl    $0x24,%rax
+    102f:	mov    %r9,%rcx
+    1032:	shl    $0x24,%rcx
+    1036:	sar    $0x20,%rcx
+    103a:	vmovss (%rdi,%rcx,4),%xmm0
+    103f:	vmovss (%rsi,%rcx,4),%xmm1
+    1044:	vaddss %xmm1,%xmm0,%xmm0
+    1048:	vmovss %xmm0,(%rdx,%rcx,4)
+    104d:	mov    %r9,%rcx
+    1050:	shl    $0x24,%rcx
+    1054:	sar    $0x20,%rcx
+    1058:	or     $0x1,%rcx
+    105c:	vmovss (%rdi,%rcx,4),%xmm0
+    1061:	vmovss (%rsi,%rcx,4),%xmm1
+    1066:	vaddss %xmm1,%xmm0,%xmm0
+    106a:	vmovss %xmm0,(%rdx,%rcx,4)
+    106f:	mov    %r9,%rcx
+    1072:	shl    $0x24,%rcx
+    1076:	sar    $0x20,%rcx
+    107a:	or     $0x2,%rcx
+    107e:	vmovss (%rdi,%rcx,4),%xmm0
+    1083:	vmovss (%rsi,%rcx,4),%xmm1
+    1088:	vaddss %xmm1,%xmm0,%xmm0
+    108c:	vmovss %xmm0,(%rdx,%rcx,4)
+    1091:	mov    %r9,%rcx
+    1094:	shl    $0x24,%rcx
+    1098:	sar    $0x20,%rcx
+    109c:	or     $0x3,%rcx
+    10a0:	vmovss (%rdi,%rcx,4),%xmm0
+    10a5:	vmovss (%rsi,%rcx,4),%xmm1
+    10aa:	vaddss %xmm1,%xmm0,%xmm0
+    10ae:	vmovss %xmm0,(%rdx,%rcx,4)
+    10b3:	mov    %r9,%rcx
+    10b6:	shl    $0x24,%rcx
+    10ba:	sar    $0x20,%rcx
+    10be:	or     $0x4,%rcx
+    10c2:	vmovss (%rdi,%rcx,4),%xmm0
+    10c7:	vmovss (%rsi,%rcx,4),%xmm1
+    10cc:	vaddss %xmm1,%xmm0,%xmm0
+    10d0:	vmovss %xmm0,(%rdx,%rcx,4)
+    10d5:	mov    %r9,%rcx
+    10d8:	shl    $0x24,%rcx
+    10dc:	sar    $0x20,%rcx
+    10e0:	or     $0x5,%rcx
+    10e4:	vmovss (%rdi,%rcx,4),%xmm0
+    10e9:	vmovss (%rsi,%rcx,4),%xmm1
+    10ee:	vaddss %xmm1,%xmm0,%xmm0
+    10f2:	vmovss %xmm0,(%rdx,%rcx,4)
+    10f7:	mov    %r9,%rcx
+    10fa:	shl    $0x24,%rcx
+    10fe:	sar    $0x20,%rcx
+    1102:	or     $0x6,%rcx
+    1106:	vmovss (%rdi,%rcx,4),%xmm0
+    110b:	vmovss (%rsi,%rcx,4),%xmm1
+    1110:	vaddss %xmm1,%xmm0,%xmm0
+    1114:	vmovss %xmm0,(%rdx,%rcx,4)
+    1119:	mov    %r9,%rcx
+    111c:	shl    $0x24,%rcx
+    1120:	sar    $0x20,%rcx
+    1124:	or     $0x7,%rcx
+    1128:	vmovss (%rdi,%rcx,4),%xmm0
+    112d:	vmovss (%rsi,%rcx,4),%xmm1
+    1132:	vaddss %xmm1,%xmm0,%xmm0
+    1136:	vmovss %xmm0,(%rdx,%rcx,4)
+    113b:	mov    %r9,%rcx
+    113e:	shl    $0x24,%rcx
+    1142:	sar    $0x20,%rcx
+    1146:	or     $0x8,%rcx
+    114a:	vmovss (%rdi,%rcx,4),%xmm0
+    114f:	vmovss (%rsi,%rcx,4),%xmm1
+    1154:	vaddss %xmm1,%xmm0,%xmm0
+    1158:	vmovss %xmm0,(%rdx,%rcx,4)
+    115d:	mov    %r9,%rcx
+    1160:	shl    $0x24,%rcx
+    1164:	sar    $0x20,%rcx
+    1168:	or     $0x9,%rcx
+    116c:	vmovss (%rdi,%rcx,4),%xmm0
+    1171:	vmovss (%rsi,%rcx,4),%xmm1
+    1176:	vaddss %xmm1,%xmm0,%xmm0
+    117a:	vmovss %xmm0,(%rdx,%rcx,4)
+    117f:	mov    %r9,%rcx
+    1182:	shl    $0x24,%rcx
+    1186:	sar    $0x20,%rcx
+    118a:	or     $0xa,%rcx
+    118e:	vmovss (%rdi,%rcx,4),%xmm0
+    1193:	vmovss (%rsi,%rcx,4),%xmm1
+    1198:	vaddss %xmm1,%xmm0,%xmm0
+    119c:	vmovss %xmm0,(%rdx,%rcx,4)
+    11a1:	mov    %r9,%rcx
+    11a4:	shl    $0x24,%rcx
+    11a8:	sar    $0x20,%rcx
+    11ac:	or     $0xb,%rcx
+    11b0:	vmovss (%rdi,%rcx,4),%xmm0
+    11b5:	vmovss (%rsi,%rcx,4),%xmm1
+    11ba:	vaddss %xmm1,%xmm0,%xmm0
+    11be:	vmovss %xmm0,(%rdx,%rcx,4)
+    11c3:	mov    %r9,%rcx
+    11c6:	shl    $0x24,%rcx
+    11ca:	sar    $0x20,%rcx
+    11ce:	or     $0xc,%rcx
+    11d2:	vmovss (%rdi,%rcx,4),%xmm0
+    11d7:	vmovss (%rsi,%rcx,4),%xmm1
+    11dc:	vaddss %xmm1,%xmm0,%xmm0
+    11e0:	vmovss %xmm0,(%rdx,%rcx,4)
+    11e5:	mov    %r9,%rcx
+    11e8:	shl    $0x24,%rcx
+    11ec:	sar    $0x20,%rcx
+    11f0:	or     $0xd,%rcx
+    11f4:	vmovss (%rdi,%rcx,4),%xmm0
+    11f9:	vmovss (%rsi,%rcx,4),%xmm1
+    11fe:	vaddss %xmm1,%xmm0,%xmm0
+    1202:	vmovss %xmm0,(%rdx,%rcx,4)
+    1207:	shl    $0x24,%r9
+    120b:	sar    $0x20,%r9
+    120f:	or     $0xe,%r9
+    1213:	vmovss (%rdi,%r9,4),%xmm0
+    1219:	vmovss (%rsi,%r9,4),%xmm1
+    121f:	vaddss %xmm1,%xmm0,%xmm0
+    1223:	vmovss %xmm0,(%rdx,%r9,4)
+    1229:	sar    $0x20,%rax
+    122d:	or     $0xf,%rax
+    1231:	vmovss (%rdi,%rax,4),%xmm0
+    1236:	vmovss (%rsi,%rax,4),%xmm1
+    123b:	vaddss %xmm1,%xmm0,%xmm0
+    123f:	vmovss %xmm0,(%rdx,%rax,4)
+    1244:	mov    %rbp,%rsp
+    1247:	pop    %rbp
+    1248:	ret
+    1249:	nopl   0x0(%rax)
+
+0000000000001250 <_pocl_kernel_vecadd_workgroup>:
+    1250:	sub    $0x18,%rsp
+    1254:	mov    %rdx,%r9
+    1257:	mov    (%rdi),%rax
+    125a:	mov    0x8(%rdi),%rcx
+    125e:	mov    (%rax),%rax
+    1261:	mov    (%rcx),%rsi
+    1264:	mov    0x10(%rdi),%rcx
+    1268:	mov    (%rcx),%rdx
+    126b:	mov    %rax,%rdi
+    126e:	call   1010 <_pocl_kernel_vecadd@plt>
+    1273:	add    $0x18,%rsp
+    1277:	ret
