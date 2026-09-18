@@ -1,0 +1,26 @@
+# Flagship demo: a 256-element, 4-work-group launch of the box-blur kernel that
+# contains a genuine off-by-one bug at the right edge of the signal (see README.md,
+# "The bug"). local=64 puts pocl into its work-item-loop codegen model (see
+# docs/PHASE0-FINDINGS.md, F4), so this also exercises the harder of the two
+# per-work-item identity mechanisms.
+kernel   kernels/blur3.cl
+name     blur3
+build    -g -cl-opt-disable
+
+global   256
+local    64
+
+arg in    global float 256 in    iota
+arg out   global float 256 out   zero
+arg tile  local  float 66
+arg n     scalar int 256
+
+print  out 250 6
+expect out 0    0.3333
+expect out 1    1
+expect out 128  128
+expect out 254  254
+# The bug: work-item 255 (the last one) should read out[255] = (254+255+255)/3 =
+# 254.667 (clamped at the right edge), but the guard clamps against `n` instead of
+# `n - 1`, so it reads one element past the buffer instead.
+expect out 255  254.667  0.01
